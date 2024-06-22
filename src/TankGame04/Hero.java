@@ -1,11 +1,13 @@
 package TankGame04;
 
+import java.util.Vector;
+
 public class Hero extends Tank {
 
     public Hero(int x, int y) {
         super(x, y);
     }
-
+    Vector<Shoot> shoots = new Vector<>();
     Shoot shoot = null;
 
     /**
@@ -26,6 +28,7 @@ public class Hero extends Tank {
                 shoot = new Shoot(getX() + 60, getY() + 20, 3);
                 break;
         }
+        shoots.add(shoot);
         new Thread(shoot).start();
         System.out.println("当前坐标是X:"+ getX()+" "+"Y:" + getY());
     }

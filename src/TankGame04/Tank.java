@@ -1,8 +1,12 @@
 package TankGame04;
 
+import java.util.Vector;
+
 public class Tank {
     private int x;
     private int y;
+    boolean isLive = true;
+    Vector<Shoot> shoots = new Vector<>();
     private int direct = 0;
     private int speed = 1;
 

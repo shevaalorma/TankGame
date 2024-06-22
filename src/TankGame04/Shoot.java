@@ -8,7 +8,7 @@ public class Shoot implements Runnable {
     int x;
     int y;
     int direct;
-    int speed = 15;
+    int speed = 20;
     boolean isLive = true;
 
     public Shoot(int x, int y, int direct) {
@@ -38,6 +38,7 @@ public class Shoot implements Runnable {
             if(x>800||x<0||y>600||y<0||this.isLive==false){
                 System.out.println("子弹销毁     "+ LocalDateTime.now());
                 isLive = false;
+
                 break;
             }
 //            System.out.println("当前坐标是x-"+x+"   "+"y-"+y);
